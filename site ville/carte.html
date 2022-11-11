@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+        }
+        #map 
+        { 
+            height: 500px;
+            width: 500px;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <center><div id="map"></div></center>
+
+    <script>
+        //30.051439706754433, 31.231679690609933
+        var map = L.map('map').setView([30.051439,31.23167], 14);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy;MAP'
+}).addTo(map);
+
+// L.marker([48.80136, 2.60752]).addTo(map)
+//     .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+//     .openPopup();
+    </script>
+</body>
+</html>
